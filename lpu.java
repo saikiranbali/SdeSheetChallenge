@@ -28,13 +28,20 @@ import java.util.Scanner;
 class HelloWorld {
 
     public static void main(String[] args) {
- Calendar rightNow = Calendar.getInstance();
+        Scanner sc = new Scanner(System.in); 
+         Calendar rightNow = Calendar.getInstance();
 int currentHour = rightNow.get(Calendar.HOUR_OF_DAY);
 int currentMinute =  rightNow.get(Calendar.MINUTE);
 int startHour=0;
 int startMinute=0;
-Scanner sc = new Scanner(System.in); 
-System.out.println("Enter Minutes : hours :");
+        // char ch='Y';
+        System.out.println("\nEnter Y or N : ");
+        char ch=sc.next().charAt(0);
+        while(ch!='N'){
+        
+
+
+System.out.println("\nEnter Minutes : hours :");
 int n=sc.nextInt();
 int min=sc.nextInt();
 System.out.println("\ncurrent time : "+currentHour+":"+currentMinute);
@@ -58,15 +65,21 @@ System.out.println("\ncurrent time : "+currentHour+":"+currentMinute);
         int rang=(currentHour*2);
         if(currentMinute>30)
         rang++;
+        int p=0;
         for(int i=rang;i<arr.length;i++)
         {
            if(arr[i]==false)
            {
-               System.out.println("\nslot available at "+(i/2)+":"+min);
+               p=((i%2==0)?(i/2):((i/2)+1));
+               System.out.println("\nslot available at "+(p)+":"+min);
+            
+            //   p=(i/2);
                break;
            }
+        //   System.out.println(i);
         }
-        
+        arr[p]=true;
+        }
         
       
     }
