@@ -44,3 +44,14 @@ class HelloWorld {
         System.out.println(fib(8));
     }
 }
+
+//sum of digits using recursion
+
+public class Solution {
+    public int solve(int A) {
+        if(A==0)
+        return 0;
+        return (A%10)+solve(A/10);
+    }
+}
+
