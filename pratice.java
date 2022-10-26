@@ -55,7 +55,7 @@ public class Solution {
     }
 }
 
-// recursively print from backtracking 8 - 7 - 6 - 5 - 4- 3- 2 -1
+// recursively print from  8 - 7 - 6 - 5 - 4- 3- 2 -1
 
 class HelloWorld {
     public static int seri(int n)
@@ -69,5 +69,23 @@ class HelloWorld {
     public static void main(String[] args) {
       
         System.out.println(seri(8));
+    }
+}
+
+// recursively print using backtracking 1 2 3 4 5 6 7 8 9 10
+
+class HelloWorld {
+    public static void seri(int n)
+        {
+
+            if(n==0)
+            return ;
+            
+             seri(n-1);
+            System.out.println(n);
+        }
+    public static void main(String[] args) {
+      
+        seri(10);
     }
 }
