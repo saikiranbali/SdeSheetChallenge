@@ -1,0 +1,4 @@
+implement power function using recrusion
+
+a pow n = (a power n/2 ) X (a power n/2 ) if N % 2 == 0
+a pow n = (a power n/2 ) X (a power n/2 ) X (a power n ) if N % 2 != 0
