@@ -89,3 +89,24 @@ class HelloWorld {
         seri(10);
     }
 }
+
+// recursively check if a string is a palindrome or not
+
+class HelloWorld {
+    public static int isPalindrome(String str,int s,int e)
+    {
+        if(s>e)
+        return 1;
+        if(str.charAt(s)==str.charAt(e))
+        return isPalindrome(str,s+1,e-1);
+        else
+        return 0;
+    }
+    public static int seri(String s)
+        {
+            return isPalindrome(s,0,s.length()-1);
+        }
+    public static void main(String[] args) {
+       System.out.println(seri("namani"));
+    }
+}
