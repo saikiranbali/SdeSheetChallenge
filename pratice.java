@@ -110,3 +110,6 @@ class HelloWorld {
        System.out.println(seri("namani"));
     }
 }
+
+
+// recursive implement the power function of a given a,n return a N
